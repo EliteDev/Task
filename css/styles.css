@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto&display=swap");
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+	list-style: none;
+}
+body{
+	background-color: #212A3E;
+}
+.container {
+  /* background: linear-gradient(
+    349deg,
+    rgba(155, 164, 181, 1) 15%,
+    rgba(57, 72, 103, 1) 100%
+  ); */
+	background-color: #F1F6F9;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.hero h1 {
+  margin: 2rem 1rem 0rem 1rem;
+  color: #212A3E;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
+}
+.hero p {
+	font-size: 1.3rem;
+	margin: 0rem 1rem 1rem 1rem;
+  font-family: "Roboto", sans-serif;
+  color: #212a3e8f;
+}
+.hero input{
+	width: 17rem;
+	height: 3rem;
+	border-radius: .3rem;
+	border: none;
+	transition: .8s;
+}
+.hero input:focus{
+	margin: 0rem .5rem 0rem 0rem;
+	outline: none;
+}
+.hero input::after{
+	border: none;
+}
+.hero button{
+	border-radius: 50% 20%;
+	font-size: 1.75rem;
+	background-color: #212A3E ;
+	color: white;
+	margin: .1rem;
+	border: none;
+	transition: background 1s;
+	padding: .3rem;
+}
+.hero button:hover{
+	background-color:#9BA4B5 ;
+}
+.li__container{
+  font-family: "Montserrat", sans-serif;
+	color: #212A3E;
+}
+
+.task{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	margin: 1rem ;
+
+	list-style: none;
+	background-color:#9BA4B5;
+	border-radius: 1rem;
+}
+.task p{
+	color: white;
+	font-size: 1rem;
+	display: flex;
+	margin: .2rem 3rem;
+}
+.task ul{
+	color: white;
+	margin: 1rem;
+}
+.task li{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.task i{
+	font-size: 1.3rem;
+	transition: color .3s ;
+}
+.task i:hover{
+	color: #212A3E;
+}

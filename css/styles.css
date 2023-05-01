@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto&display=swap");
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-	list-style: none;
+  list-style: none;
 }
-body{
-	background-color: #212A3E;
+body {
+  background-color: #f1f6f9;
 }
 .container {
   /* background: linear-gradient(
@@ -14,7 +14,7 @@ body{
     rgba(155, 164, 181, 1) 15%,
     rgba(57, 72, 103, 1) 100%
   ); */
-	background-color: #F1F6F9;
+  background-color: #f1f6f9;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -22,99 +22,99 @@ body{
   align-items: center;
   place-items: center;
   text-align: center;
+  padding: 5rem 10rem;
   border-radius: 1rem;
-  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
-    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
 }
 .hero h1 {
-  margin: 2rem 1rem 0rem 1rem;
-  color: #212A3E;
+  margin: 2rem 1rem 1rem 1rem;
+  color: #212a3e;
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
 }
 .hero p {
-	font-size: 1.3rem;
-	margin: 0rem 1rem 1rem 1rem;
+  font-size: 1.3rem;
+  margin: 0rem 1rem 1rem 1rem;
   font-family: "Roboto", sans-serif;
   color: #212a3e8f;
 }
-.hero input{
-	width: 17rem;
-	height: 3rem;
-	border-radius: .3rem;
-	border: none;
-	transition: .8s;
+.hero input {
+  width: 17rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+  border: none;
+  transition: 0.8s;
 }
-.hero input:focus{
-	margin: 0rem .5rem 0rem 0rem;
-	outline: none;
+.hero input:focus {
+  margin: 0rem 0.5rem 0rem 0rem;
+  outline: none;
 }
-.hero input::after{
-	border: none;
+.hero input::after {
+  border: none;
 }
-.hero button{
-	border-radius: 50% 20%;
-	font-size: 1.75rem;
-	background-color: #212A3E ;
-	color: white;
-	margin: .1rem;
-	border: none;
-	transition: background 1s;
-	padding: .3rem;
+.hero button {
+  border-radius: 50% 20%;
+  font-size: 1.75rem;
+  background-color: #212a3e;
+  color: white;
+  margin: 0.1rem;
+  border: none;
+  transition: background 1s;
+  padding: 0.3rem;
 }
-.hero button:hover{
-	background-color:#9BA4B5 ;
+.hero button:hover {
+  background-color: #9ba4b5;
 }
-.li__container{
+.li__container {
   font-family: "Montserrat", sans-serif;
 }
-.li__container h3{
-	color: #212A3E;
-	font-size: 1.5rem;
-	margin: 1rem;
+.li__container h3 {
+  color: #212a3e;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
-.task{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	margin: 1rem ;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-	list-style: none;
+.task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+  list-style: none;
 }
-.task p{
-	color: white;
-	font-size: 1rem;
-	display: flex;
-	margin: .2rem 3rem;
+.task p {
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  margin: 0.2rem 3rem;
 }
-.task ul{
-	color: white;
-	margin: 1rem;
+.task ul {
+  color: white;
+  margin: 1rem;
 }
-.task li{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	margin-bottom: 1rem;
-	background-color:#9BA4B5;
-	border-radius: 1rem;
-	padding: 1rem 4rem;
+.task li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #9ba4b5;
+  border-radius: 1rem;
+  padding: 1rem 5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
-.task i{
-	font-size: 1.3rem;
-	transition: color .3s ;
+.task i {
+  font-size: 1.3rem;
+  transition: color 0.3s;
 }
-.task i:hover{
-	color: #212A3E;
+.task i:hover {
+  color: #212a3e;
 }
-.fa-regular:focus {
-	font-style: italic;
+.task-done {
+  text-decoration: line-through;
 }

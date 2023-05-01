@@ -1,4 +1,4 @@
-// obtén el formulario y la lista de tareas pendientes
+const inputTask = document.getElementById("task");
 const formulario = document.getElementById("formulario");
 const botonesEliminar = document.querySelectorAll(".fa-trash");
 const listaTareas = document.getElementById("list");
@@ -11,7 +11,6 @@ formulario.addEventListener("submit", function(event) {
 
   const nuevoElemento = document.createElement("li");
   nuevoElemento.innerHTML = `
-    <i class="fa-regular fa-circle"></i>
     <p>${nuevaTarea}</p>
     <i class="fa-solid fa-trash"></i>
   `;

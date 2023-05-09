@@ -2,22 +2,56 @@ const inputTask = document.getElementById("task");
 const formulario = document.getElementById("formulario");
 const botonesEliminar = document.querySelectorAll(".fa-trash");
 const listaTareas = document.getElementById("list");
+const descriptionInput = document.getElementById('description');
+
+
+let tasks = [];
+
 
 formulario.addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const nuevaTarea = document.getElementById("task").value;
+  const taskTittle = document.getElementById("task").value;
+  const descriptionInput = document.getElementById('description').value;
 
+  let task = {
+    tittle: taskTittle,
+    description: descriptionInput,
+  }
 
-  const nuevoElemento = document.createElement("li");
-  nuevoElemento.innerHTML = `
-    <p>${nuevaTarea}</p>
-    <i class="fa-solid fa-trash"></i>
-  `;
-
-  listaTareas.appendChild(nuevoElemento);
-  document.getElementById("task").value = "";
+  tasks.push(task);
+  renderTasks(tasks);
 });
+
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", function() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredTasks = tasks.filter(function(task) {
+    return task.tittle.toLowerCase().includes(searchTerm) || task.description.toLowerCase().includes(searchTerm);
+  });
+  renderTasks(filteredTasks);
+});
+
+function renderTasks(tasks) {
+  listaTareas.innerHTML = "";
+  tasks.forEach(function(task) {
+    const nuevoElemento = document.createElement("li");
+    const tittleTask = document.createElement('h3');
+    const tittleDescription = document.createElement('p');
+    const icon = document.createElement('i');
+    icon.classList = 'fa-solid fa-trash'
+
+    tittleTask.innerText = task.tittle;
+    tittleDescription.innerText = task.description;
+
+    nuevoElemento.append(tittleTask);
+    nuevoElemento.append(tittleDescription);
+    nuevoElemento.append(icon);
+
+    listaTareas.append(nuevoElemento);
+  });
+}
 
 listaTareas.addEventListener('click', (event) => {
   if (event.target.classList.contains('fa-trash')) {
@@ -25,3 +59,4 @@ listaTareas.addEventListener('click', (event) => {
     taskItem.remove();
   }
 });
+

@@ -7,6 +7,12 @@ const descriptionInput = document.getElementById('description');
 
 let tasks = [];
 
+if(!localStorage.getItem('tasks')) {
+  localStorage.setItem('tasks', '[]');
+} else {
+  tasks = JSON.parse(localStorage.getItem('tasks'));
+  renderTasks(tasks);
+}
 
 formulario.addEventListener("submit", function(event) {
   event.preventDefault();
@@ -20,6 +26,7 @@ formulario.addEventListener("submit", function(event) {
   }
 
   tasks.push(task);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
   renderTasks(tasks);
 });
 
@@ -50,6 +57,7 @@ function renderTasks(tasks) {
     nuevoElemento.append(icon);
 
     listaTareas.append(nuevoElemento);
+
   });
 }
 
@@ -59,4 +67,5 @@ listaTareas.addEventListener('click', (event) => {
     taskItem.remove();
   }
 });
+
 
